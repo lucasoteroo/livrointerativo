@@ -39,7 +39,7 @@ MMMMMMW0ollloooOWMMMMMMMMMW0ooooolldKMMM
 MMMMMMWXOxxxkOKNMMMMMMMMMMMWKkdlcc:l0MMM
 IMAGEM_FIM
 
-CAPITULO_COM_IMAGEM
+CAPITULO
 ID
 final1
 PERSONAGENS
@@ -50,12 +50,7 @@ Ao passar devagar pelo gato, o mesmo acaba ouvindo e corre atrás de jerry por t
 VARIACOES
 -100
 0
-IMAGEM
- _._     _,-'""`-._
-(,-.`._,'(       |\`-/|
-    `-.-' \ )-`( , o o)
-          `-    \`_`"'-
-IMAGEM_FIM
+
 
 CAPITULO
 ID
