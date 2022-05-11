@@ -1,0 +1,6 @@
+Protagonista
+jerry
+100
+Antagonista
+tom
+100

@@ -1,0 +1,87 @@
+CAPITULO_COM_IMAGEM
+ID
+Raiz
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Olá me chamo jerry, sou um rato faminto por queijo, vivo na casa de um casal de humanos, e sempre vivi bem, até a chegada do gato tom. Antes eu comia pelo dia, passeava pela noite, tomava banho na pia e dormia em paz, porém com a chegada do Tom, minha vida virou um inferno, pois ele vive a minha procuram querendo me expulsar daqui. Eu resisto pois cheguei primeiro, então ele que lute. Preciso da sua ajuda para conseguir comer um delicioso queijo parmesão que o casal de humanos comprou, me ajude a vencer o gato Tom, Vamos lá... 
+Estou pensando em ir no turno da noite onde geralmente Tom está dormindo.
+VARIACOES
+-10
+0
+IMAGEM
+MMMMMMMMMMMWKxlld0XNWMMMMMMWX0OOOXWMMMMM
+MMMMMMMMMMMKdllccldodk0XNX0xoodddd0WMMMM
+MMMMMMMMMWXxcllllllcccooddloxO000kkXMMMM
+MMMMMMMMXxoclooolcccclooollx00000OkKMMMM
+MMMMMMMNklodooodxkxooooooldO00000kkXMMMM
+MMMMMMMXdxX0dod0WWOoooooolokkO000xOWMMMM
+MMMMMMMNkxOdoooxKKxoooooolloxO00kONMMMMM
+MMMWNNXKxoc;loc:dxoooloooolx00Ok0NMMMMMM
+WWNNNXklldxllkK0dlllllloollkOO0XWMMMMMMM
+WNNWWWKdlokOxddl;;xkxdoolox0KXWMMMMMMMMM
+MMMMMMMN0xdkOo,.;d0kolcoONWMMMMMMMMMMMMM
+MMMMMMMMW0oloddodxdllllox0NMMMMMMMMMMMMM
+MMMMMMMNOollllooooooooooood0WMMMMMMMMMMM
+MMMMMMXxoooldxdxkxooooooooookXMMMMMMMMMM
+MMMMWKdoooloOK00K0xoollloooooxKWMMMMMMMM
+NNXKkdooodxxOKKKKK0xooooxkkdoooxk0KNWMMM
+doooooox0XWKOKKKKKK0kxoooxOOoooolllkNMMM
+oodxxolOWMMKOKKKKKKKK0xooollldkOkdd0WMMM
+NNNWWX0KWMMXkOKKKKKKKK0xooollkKKOkxkO0KX
+MMMMMMMMMMMMKdkKKKKKKKKkoooocoxkO0XNWNNN
+MMMMMMMMMMMMKoldk00000OdoooolxNMMMMMMMMM
+MMMMMMMMMMMWkooooodoooooooooodXMMMMMMMMM
+MMMMMMMMMMWKdoooodk0KXX0xoooooOWMMMMMMMM
+MMMMMMMWNKOdooodkXWMMMMMWXOdoodkO0XWMMMM
+MMMMMMW0ollloooOWMMMMMMMMMW0ooooolldKMMM
+MMMMMMWXOxxxkOKNMMMMMMMMMMMWKkdlcc:l0MMM
+IMAGEM_FIM
+
+CAPITULO
+ID
+final1
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Ao passar devagar pelo gato, o mesmo acaba ouvindo e corre atrás de jerry por toda a casa, após uma longa fulga, jerry acha que venceu o gato e acaba pisando em uma ratoeira.
+VARIACOES
+-100
+0
+
+CAPITULO
+ID
+final2
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Jerry decide bater com a panela em Tom para dismaia-lo, então ele executa seu plano e consegue bater no gato. Com isso ele vai até a mesa, tira um pedaço do queijo e vai para sua toca comer em paz.
+VARIACOES
+0
+-100
+
+
+ESCOLHA
+DE
+Raiz
+PARA
+final2
+TEXTO DIGITADO
+panelada
+TEXTO MOSTRADO
+vou desmaiar ele com uma [panelada] 
+
+ESCOLHA
+DE
+Raiz
+PARA
+final1
+TEXTO DIGITADO
+passar
+TEXTO MOSTRADO
+ou vou [passar] em silêncio sem fazer nada?
+
+
