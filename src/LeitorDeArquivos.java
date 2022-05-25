@@ -44,7 +44,7 @@ public class LeitorDeArquivos { // public pq uso eles em outra clase
 
     }
 
-    public HashMap<String, Capitulo> lerCapitulos(String path, Map<String, Personagem> personagens) {
+    public HashMap<String, Capitulo> lerCapitulos(String path, Map<String, Personagem> personagens)  {
         HashMap<String, Capitulo> capitulos = new HashMap<String, Capitulo>();
 
         File arquivo = new File(path); // path = caminho que o scanner deve ir

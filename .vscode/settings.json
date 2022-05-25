@@ -11,5 +11,6 @@
         "c:\\Users\\lucas\\OneDrive\\Área de Trabalho\\projetosjava\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
         "c:\\Users\\lucas\\OneDrive\\Área de Trabalho\\projetosjava\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
         "c:\\Users\\lucas\\OneDrive\\Área de Trabalho\\projetosjava\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar"
-    ]
+    ],
+    "editor.rulers": [100,100]
 }

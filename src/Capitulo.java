@@ -10,6 +10,7 @@ public class Capitulo {
     private Personagem personagem2;
     private int variacaoVidaPersonagem1;
     private int variacaoVidaPersonagem2;
+ 
 
     protected Capitulo() // protected fala que só quem herda de Capitulo pode chama-lo
     {
@@ -34,6 +35,7 @@ public class Capitulo {
     {
         this.lerCapitulos(personagens, escaneadorDoArquivo);
         this.escolhas = new ArrayList<Escolha>();
+  
     }
 
     public String getTexto()
@@ -85,69 +87,13 @@ public class Capitulo {
         escolhas.add(escolha);
     }
 
-    public void play() {
-        mostrar();// mostra o texto do capitulo e as escolhas
-
-        if (escolhas.size() > 0) // onde o usuário faz sua escolha por cap
-        {
-            int idCapituloEscolhido = escolher();
-            escolhas.get(idCapituloEscolhido).getProximo().play();
-        } else {
-            System.out.println("Sua experiência chegou ao fim, reinicie a história para uma nova experiência");
-        }
+    public ArrayList<Escolha> getEscolhas() {
+        return escolhas;
     }
 
-    protected void mostrar() // Private: A única classe que tem acesso ao atributo é a própria classe que o
-                           // define, ou seja, se uma classe Pessoa declara um atributo privado chamado
-                           // nome, somente a classe Pessoa terá acesso a ele.
-    {
-        System.out.println();
-        System.out.println(" ");
-        System.out.println();
-
-        System.out.println(texto + "\n");
+    public void atualizarVidaPersonagem() {
         personagem1.atualizarVida(variacaoVidaPersonagem1);
         personagem2.atualizarVida(variacaoVidaPersonagem2);
 
-        // laço onde percorre o tamanho da lista.
-        for (int i = 0; i < escolhas.size(); i++) {
-            System.out.println(escolhas.get(i).getTextoMostrado());
-        }
-
-        System.out.println();
-        System.out.println(". . .");
-        System.out.println();
-
-    }
-
-    private int escolher() {
-        int opcaoEscolhida = 0;
-        String escolha;
-        boolean escolhaValida = false;
-
-        while (!escolhaValida) {
-            //escolha = escaneador.nextLine();
-            escolha = "";
-            for (int i = 0; i < escolhas.size(); i++) {
-
-                // Esse "escolhas[i].texto" é referência ao texto que tá dentro do indice da
-                // lista
-
-                if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
-                    escolhaValida = true;
-                    opcaoEscolhida = i;
-
-                }
-            }
-            if (!escolhaValida) {
-                System.out.println("Você não digitou algo válido, gentileza digitar novamente");
-                escolhaValida = false;
-            }
-        }
-        return opcaoEscolhida;
-    }
-
-    public ArrayList<Escolha> getEscolhas() {
-        return escolhas;
     }
 }
