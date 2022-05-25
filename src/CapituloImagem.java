@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class CapituloImagem extends Capitulo {
     private String imagem;
 
-    public CapituloImagem(Map<String, Personagem> personagens, Scanner escaneadorDoConsole,
+    public CapituloImagem(Map<String, Personagem> personagens,
             Scanner escaneadorDoArquivo) {
 
         super(); // serve para chamar o construtor da superclasse. Ele sempre é chamado, mesmo
                  // quando não está explícito no código
         this.lerCapitulos(personagens, escaneadorDoArquivo);
-        this.escaneador = escaneadorDoConsole;
         this.escolhas = new ArrayList<Escolha>();
     }
 

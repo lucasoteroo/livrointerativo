@@ -10,7 +10,6 @@ public class Capitulo {
     private Personagem personagem2;
     private int variacaoVidaPersonagem1;
     private int variacaoVidaPersonagem2;
-    protected Scanner escaneador;
 
     protected Capitulo() // protected fala que só quem herda de Capitulo pode chama-lo
     {
@@ -19,24 +18,27 @@ public class Capitulo {
     }
 
     public Capitulo(String texto, Personagem personagem1, Personagem personagem2,
-            int variacaoVidaPersonagem1, int variacaoVidaPersonagem2, Scanner escaneador) {
+            int variacaoVidaPersonagem1, int variacaoVidaPersonagem2) {
 
         this.texto = texto;
         this.personagem1 = personagem1;
         this.personagem2 = personagem2;
         this.variacaoVidaPersonagem2 = variacaoVidaPersonagem1;
         this.variacaoVidaPersonagem2 = variacaoVidaPersonagem2;
-        this.escaneador = escaneador;
         this.escolhas = new ArrayList<Escolha>();
 
     }
 
-    public Capitulo(Map<String, Personagem> personagens, Scanner escaneadorDoConsole, Scanner escaneadorDoArquivo)
+    public Capitulo(Map<String, Personagem> personagens, Scanner escaneadorDoArquivo)
 
     {
         this.lerCapitulos(personagens, escaneadorDoArquivo);
-        this.escaneador = escaneadorDoConsole;
         this.escolhas = new ArrayList<Escolha>();
+    }
+
+    public String getTexto()
+    {
+        return this.texto;
     }
 
     protected void lerCapitulos(Map<String, Personagem> personagens,
@@ -124,7 +126,8 @@ public class Capitulo {
         boolean escolhaValida = false;
 
         while (!escolhaValida) {
-            escolha = escaneador.nextLine();
+            //escolha = escaneador.nextLine();
+            escolha = "";
             for (int i = 0; i < escolhas.size(); i++) {
 
                 // Esse "escolhas[i].texto" é referência ao texto que tá dentro do indice da
@@ -142,5 +145,9 @@ public class Capitulo {
             }
         }
         return opcaoEscolhida;
+    }
+
+    public ArrayList<Escolha> getEscolhas() {
+        return escolhas;
     }
 }

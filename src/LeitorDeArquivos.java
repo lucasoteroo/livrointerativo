@@ -44,8 +44,7 @@ public class LeitorDeArquivos { // public pq uso eles em outra clase
 
     }
 
-    public HashMap<String, Capitulo> lerCapitulos(String path, Map<String, Personagem> personagens,
-            Scanner escaneadorDoConsole) {
+    public HashMap<String, Capitulo> lerCapitulos(String path, Map<String, Personagem> personagens) {
         HashMap<String, Capitulo> capitulos = new HashMap<String, Capitulo>();
 
         File arquivo = new File(path); // path = caminho que o scanner deve ir
@@ -69,11 +68,11 @@ public class LeitorDeArquivos { // public pq uso eles em outra clase
                     String id = escaneadorDoArquivo.nextLine(); // armazena identificadordo cap
                     if(linha.equals("CAPITULO"))
                     {
-                        capitulos.put(id, new Capitulo(personagens, escaneadorDoConsole, escaneadorDoArquivo));// aqui ele valores aos dicionario se já existisse são substituídos, ou seja
+                        capitulos.put(id, new Capitulo(personagens, escaneadorDoArquivo));// aqui ele valores aos dicionario se já existisse são substituídos, ou seja
                     }
                     else if(linha.equals("CAPITULO_COM_IMAGEM"))
                     {
-                        capitulos.put(id, new CapituloImagem(personagens, escaneadorDoConsole, escaneadorDoArquivo));// aqui ele valores aos dicionario se já existisse são substituídos, ou seja
+                        capitulos.put(id, new CapituloImagem(personagens,escaneadorDoArquivo));// aqui ele valores aos dicionario se já existisse são substituídos, ou seja
                                                                                                            // após ler os capítulos ele toma valores para esses parametros.
                     }
 

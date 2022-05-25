@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Map;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -7,6 +9,12 @@ import javafx.scene.control.ButtonBar;
 import javafx.scene.control.TextArea;
 
 public class Controlador {
+
+    private Capitulo raiz;
+
+
+    @FXML
+    private Button botaoIniciar;
 
     @FXML
     private ButtonBar botoesEscolhas;
@@ -17,9 +25,28 @@ public class Controlador {
     @FXML
     private TextArea textoCapitulo;
 
-    public void mostrarTextoCapitulo(String texto)
+    @FXML
+    void iniciarHistoria(ActionEvent event)
     {
-        textoCapitulo.setText(texto);
+        
+    LeitorDeArquivos leitor = new LeitorDeArquivos();
+    Map<String, Personagem> personagens = leitor.lerPersonagens("rsc/Personagens.txt"); //dicionario de personagens, onde estão todos armazenados.
+    Map<String, Capitulo> capitulos = leitor.lerCapitulos("rsc/Capitulos.txt",personagens); // dicionario de capitulos que é integrado com as escolhas e personagens quando for lido
+ 
+    raiz = capitulos.get("Raiz"); //lemos o capitulo respectivo a raiz e mostramos
+    mostrarCapitulo(raiz);
+
+    botaoIniciar.setVisible(false);
+}
+private void mostrarCapitulo( Capitulo capitulo)
+{
+    mostrarTextoCapitulo(raiz.getTexto());
+    mostrarEscolhas(capitulo.getEscolhas());
+
+}
+public void mostrarTextoCapitulo(String texto)
+{
+    textoCapitulo.setText(texto);
     }
     public void mostrarImagemCapitulo(String imagem)
     {
